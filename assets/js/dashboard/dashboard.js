@@ -65,7 +65,7 @@
     });
 
     var sparklineBarData = [32, 38, 36, 35, 38, 37, 35, 34, 36, 38, 36, 37, 35, 34, 37, 38, 38];
-    $("#bar-config").sparkline(sparklineBarData,  
+    $("#bar-config").sparkline(sparklineBarData,
     {
         type: 'bar',
         height: '60',
@@ -74,75 +74,75 @@
         barColor: info
     });
 
-    var allocationChart = document.getElementById("allocation-chart");
-    var allocationCtx = allocationChart.getContext('2d');
-    var allocationData = {
-        labels: ["Texas", "Utah", "Georgia", "Nebraska"],
-          datasets: [
-            {
-                fill: true,
-                backgroundColor: [info, primary, success, gray],
-                data: [300, 500, 100, 200]
-            }
-        ]
-    };
+    // var allocationChart = document.getElementById("allocation-chart");
+    // var allocationCtx = allocationChart.getContext('2d');
+    // var allocationData = {
+    //     labels: ["Texas", "Utah", "Georgia", "Nebraska"],
+    //       datasets: [
+    //         {
+    //             fill: true,
+    //             backgroundColor: [info, primary, success, gray],
+    //             data: [300, 500, 100, 200]
+    //         }
+    //     ]
+    // };
 
-    var allocationConfig = new Chart(allocationCtx, {
-        type: 'doughnut',
-        data: allocationData,
-        options: {
-            maintainAspectRatio: false,
-            legend: {
-                display: false
-            },
-            cutoutPercentage: 75
-        }
-    });
+    // var allocationConfig = new Chart(allocationCtx, {
+    //     type: 'doughnut',
+    //     data: allocationData,
+    //     options: {
+    //         maintainAspectRatio: false,
+    //         legend: {
+    //             display: false
+    //         },
+    //         cutoutPercentage: 75
+    //     }
+    // });
 
-    var lineChart = document.getElementById("line-chart");
-    var lineCtx = lineChart.getContext('2d');
-    lineChart.height = 80;
-    var datapack1 = [65, 59, 80, 81, 56, 55, 40];
-    var datapack2 = [28, 48, 40, 19, 90, 27, 75];
-    var lineConfig = new Chart(lineCtx, {
-        type: 'line',
-        data: {
-        labels: ["16th", "17th", "18th", "19th", "20th", "21th", "22th"],
-        datasets: [{
-            label: 'Series A',
-            backgroundColor: infoInverse,
-            borderColor: info,
-            pointBackgroundColor: info,
-            borderWidth: 2,
-            data: datapack1
-        },
-        {
-            label: 'Series B',
-            backgroundColor: successInverse,
-            borderColor: success,
-            pointBackgroundColor: success,
-            borderWidth: 2,
-            data: datapack2
-            }]
-        },
-        
-        options: {
-            legend: {
-                display: false
-            },
-            scales: {
-              
-              yAxes: [{
-
-                  stacked: true,
-                   ticks: {
-                      min: 0,
-                      stepSize: 30,
-                  }
-
-              }]
-          }
-        }
-    });
+    // var lineChart = document.getElementById("line-chart");
+    // var lineCtx = lineChart.getContext('2d');
+    // lineChart.height = 80;
+    // var datapack1 = [65, 59, 80, 81, 56, 55, 40];
+    // var datapack2 = [28, 48, 40, 19, 90, 27, 75];
+    // var lineConfig = new Chart(lineCtx, {
+    //     type: 'line',
+    //     data: {
+    //     labels: ["16th", "17th", "18th", "19th", "20th", "21th", "22th"],
+    //     datasets: [{
+    //         label: 'Series A',
+    //         backgroundColor: infoInverse,
+    //         borderColor: info,
+    //         pointBackgroundColor: info,
+    //         borderWidth: 2,
+    //         data: datapack1
+    //     },
+    //     {
+    //         label: 'Series B',
+    //         backgroundColor: successInverse,
+    //         borderColor: success,
+    //         pointBackgroundColor: success,
+    //         borderWidth: 2,
+    //         data: datapack2
+    //         }]
+    //     },
+		//
+    //     options: {
+    //         legend: {
+    //             display: false
+    //         },
+    //         scales: {
+		//
+    //           yAxes: [{
+		//
+    //               stacked: true,
+    //                ticks: {
+    //                   min: 0,
+    //                   stepSize: 30,
+    //               }
+		//
+    //           }]
+    //       }
+    //     }
+    // });
 
 })(jQuery);
